@@ -1,0 +1,116 @@
+:root{
+    --primary-color:#003F71;
+    --secondary-color:#0064B4;
+    --light-color:#fff;
+}
+
+.signInGrid{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "login logo"
+    "login logo";
+    min-height:100%;
+    min-width:100%;
+    
+}
+.login{
+    grid-area: login;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    min-width: 50%;
+
+}
+.loginHeader{
+    font-size: clamp(23px,19px,27px);
+    font-weight: 600;
+
+}
+.loginBody{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+
+}
+.loginBodyHeader{
+    font-size: clamp(16px,17px,20px);
+    font-weight: 500;
+
+}
+.loginBodyContent{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.loginBodyContent label{
+    font-size: clamp(13px,12px,18px);
+}
+.loginBodyContent input{
+    width: 300px;
+    padding: 5px 10px;
+    border-color:gray ;
+    border-radius: 3px;
+
+
+}
+.loginBodyContent input::placeholder{
+    color: gray;
+    font-weight: 300;
+    font-size: 14px;
+}
+.loginBodyContent a{
+    color: var(--secondary-color) ;
+    width: 100%;
+    font-size: clamp(12px,13px,17px);
+    margin-block: 6px;
+    text-align: right;
+}
+.loginBodyContentButton{
+    color: var(--light-color);
+    border: none;
+    border-radius: 3px;
+    min-width: 100%;
+    background-color: var(--secondary-color);
+    padding: 10px 10px;
+}
+.needHelpContent{
+    width: 100%;
+    text-align: left !important;
+
+}
+.loginFooter{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.logo{
+    min-height: 100vh;
+
+    background-color: var(--primary-color);
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.424) 0px 3px 8px;
+   
+}
+.logo img{
+    margin: auto;
+    height: 60%;
+}
+@media (max-width:40rem) {
+    .signInGrid{
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "login login"
+        "logo logo";
+        min-height:100%;
+        min-width:100%;
+    }
+}
